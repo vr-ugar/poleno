@@ -40,9 +40,21 @@
 									  	    toel.setAttribute('visible', 'true');
 									              
 									              document.getElementById(el.parentEl.id).setAttribute('visible', 'false');
-									  		  };
-						      		     }
+									  <!-- change ambient sound -->
+										  var ambient = document.getElementById("ambient_sound");
+									  ambient.setAttribute('src', document.getElementById(toel.getAttribute('ambient')).getAttribute('src'));
+									  <!--ambient.setAttribute('src', '#spider_sound');-->
+									  console.log("ambient src");
+									  console.log(ambient.getAttribute("src"));
+
+									  <!--mute all scene sounds>
+								          var sounds = parel.parentEl.querySelectorAll('a-sound');
+									  console.log(parel);
+									  console.log("sounds");
+									  console.log(sounds);
+									  		  }
+						      		     };
 				      		    
-				      		}
+				      		};
 		            });
 

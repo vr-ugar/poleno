@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>For Katya • A-Frame</title>
-    <script src="https://aframe.io/releases/0.9.2/aframe.min.js">></script>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="handle-events.js"></script>
 
   </head>
@@ -18,23 +18,32 @@
         <a-asset-item id="spider_mtl" src="assets/spider/spider.mtl"></a-asset-item>
      
 	<audio id="spider_sound" src="assets/spider/spider.mp3" preload="true"></audio>
+	<audio id="wood_ambient" src="assets/wood/wood.mp3" preload="true"></audio>
+
+	<!--test sounds-->
+	<audio id="osc" src="assets/test/osc.mp3" preload="true"></audio>
+	<audio id="wow" src="assets/test/wow.mp3" preload="true"></audio>
       </a-assets>
       <a-sky color="black"></a-sky>
 	    <a-camera><a-cursor color="red" visible="false"></a-cursor>
-	    <a-sound src="#spider_sound" autoplay="true" loop="true" volume="1" position="0 0 -0.2"></a-sound>
+	    <a-sound id="ambient_sound" src="#wood_ambient" positional=false autoplay="true" loop="true" volume="1" position="0 0 -1"></a-sound>
 	    </a-camera>
 
+	    <a-entity id="wood">
       <a-obj-model id="wood" src="#wood_obj" mtl="#wood_mtl" rotation="-137.53 1.47 4.13" position="-2.70101 25.8838 -48.17656" scale="5 5 5" visible="true" original_scale="5 5 5">      
-	      <a-sphere toid="spider" color="red" position="0.31082 -4.4339 -8.54532" handle-events="" material="" geometry=""> </a-sphere>
+       <a-sphere toid="spider" color="red" position="-1.22615 -7.71505 -9.25894" handle-events="" material="" geometry=""> </a-sphere>
+
 
       </a-obj-model>
+	      <a-sound id="oscs" color="purple" position="10 0 0" sound="src: #osc; autoplay: true; loop: true"> </a-sphere>
+	      <a-sound id="wows" color="blue" position="-10 0 0" sound="src: #wow; autoplay: true; loop: true"> </a-sphere>
+	    </a-entity>
 
-      <a-obj-model id="spider" src="#spider_obj" mtl="#spider_mtl" rotation="-10 -2.6 -90" position="5.48339 26.64887 87.2042" scale="10 10 10" visible="false" material="" obj-model="" original_scale="10 10 10" > 
+      <a-entity id="spider" ambient="spider_sound" original_scale="1 1 1" visible="false">
+      <a-obj-model src="#spider_obj" mtl="#spider_mtl" rotation="-10 -2.6 -90" position="5.48339 26.64887 87.2042" scale="10 10 10"  material="" obj-model=""> 
 		      		       
-		      		            </a-sphere>
-		       
-		            </a-sphere>
       </a-obj-model>
+      </a-entity>
     </a-scene>
   </body>
 </html>
