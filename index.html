@@ -22,7 +22,22 @@
         <a-asset-item id="leaf_mtl" src="assets/leaf/leaf.mtl"></a-asset-item>
         <a-asset-item id="circle_obj" src="assets/circle/circle.obj"></a-asset-item>
         <a-asset-item id="circle_mtl" src="assets/circle/circle.mtl"></a-asset-item>
-        
+        <a-asset-item id="nets_obj" src="assets/nets/nets.obj"></a-asset-item>
+        <a-asset-item id="nets_mtl" src="assets/nets/nets.mtl"></a-asset-item>
+        <a-asset-item id="object_1_obj" src="assets/object_1/object_1.obj"></a-asset-item>
+        <a-asset-item id="object_1_mtl" src="assets/object_1/object_1.mtl"></a-asset-item>
+        <a-asset-item id="plant_obj" src="assets/plant/plant.obj"></a-asset-item>
+        <a-asset-item id="plant_mtl" src="assets/plant/plant.mtl"></a-asset-item>
+        <a-asset-item id="tube_obj" src="assets/tube/tube.obj"></a-asset-item>
+        <a-asset-item id="tube_mtl" src="assets/tube/tube.mtl"></a-asset-item>
+        <a-asset-item id="glove_obj" src="assets/glove/glove.obj"></a-asset-item>
+        <a-asset-item id="glove_mtl" src="assets/glove/glove.mtl"></a-asset-item>
+        <a-asset-item id="pocket_obj" src="assets/pocket/pocket.obj"></a-asset-item>
+        <a-asset-item id="pocket_mtl" src="assets/pocket/pocket.mtl"></a-asset-item>
+        <a-asset-item id="wall_3_obj" src="assets/wall_3/wall_3.obj"></a-asset-item>
+        <a-asset-item id="wall_3_mtl" src="assets/wall_3/wall_3.mtl"></a-asset-item>
+        <a-asset-item id="object_2_obj" src="assets/object_2/object_2.obj"></a-asset-item>
+        <a-asset-item id="object_2_mtl" src="assets/object_2/object_2.mtl"></a-asset-item>
      
 	     <audio id="spider_sound" src="assets/spider/spider.mp3" preload="true"></audio>
        <audio id="spider_ambient" src="assets/spider/spider_2.mp3" preload="true"></audio>
@@ -45,14 +60,12 @@
         <a-sphere toid="seno" color="yellow" position="4 4 -2" handle-events="" material="" geometry=""> </a-sphere>
         <a-sphere toid="leaf" color="green" position="6 4 -2" handle-events="" material="" geometry=""> </a-sphere>
 
+     <a-obj-model id="wood" src="#wood_obj" mtl="#wood_mtl" rotation="-2.48 -17.62 -2.73" position="-7 21 -13.71" scale="3 3 3" visible="" original_scale="3 3 3" material="" obj-model="">      
 
-
-
-        <a-obj-model src="#wood_obj" mtl="#wood_mtl" rotation="-2.48 -17.62 -2.73" position="-7 21 -13.71" scale="3 3 3" visible="" original_scale="3 3 3" material="" obj-model="">      
-        </a-obj-model>
-
-
+      </a-obj-model>
+      
       </a-entity>
+
 
 <!-- spider -->
       <a-entity id="spider" ambient="spider_ambient" visible="false">
@@ -78,16 +91,47 @@
         </a-obj-model>
 
 
-        <a-sphere toid="wood" color="black" position="0 8 0" handle-events="" material="" geometry=""> </a-sphere>
-      </a-entity>
-
 <!-- circle -->
+    
       <a-entity id="circle" ambient="circle_ambient" visible="false">
-        <a-obj-model src="#circle_obj" mtl="#circle_mtl" rotation="0 -90.6 0" position="6.34648 -6.63875 -7.37038" scale="5 5 5" visible="true" material="" obj-model="" original_scale="10 10 10">       
-        </a-obj-model>
-
+      <a-obj-model id="circle" src="#circle_obj" mtl="#circle_mtl" rotation="0 -90.6 0" position="6.34648 -6.63875 -5.29867" scale="10 10 10" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+        
         <a-sphere toid="wood" color="black" position="0 8 0" handle-events="" material="" geometry=""> </a-sphere>
       </a-entity>
+        </a-entity>
+
+<!-- nets -->
+      <a-obj-model id="nets" src="#nets_obj" mtl="#nets_mtl" rotation="0 50 0" position="0 -3.53 0" scale="0.26 0.26 0.26" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+<!-- object_2 -->
+      <a-obj-model id="object_2" src="#object_2_obj" mtl="#object_2_mtl" rotation="0 50 0" position="0 -3.53 0" scale="0.26 0.26 0.26" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+<!-- object_1 -->
+      <a-obj-model id="object_1" src="#object_1_obj" mtl="#object_1_mtl" rotation="0 50 0" position="0 -7 -40" scale="10 10 10" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+<!-- plant -->
+      <a-obj-model id="plant" src="#plant_obj" mtl="#plant_mtl" rotation="0 -10 0" position="0 -2.71493 -90.44135" scale="7.5 7.5 7.5" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+<!-- tube -->
+      <a-obj-model id="tube" src="#tube_obj" mtl="#tube_mtl" rotation="-1.92 -59.02 4.37" position="2.20507 -3.23381 -13.716" scale="2 2 2" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+<!-- glove -->
+      <a-obj-model id="glove" src="#glove_obj" mtl="#glove_mtl" rotation="0 -50 0" position="2.20507 -1.79922 -16.89091" scale="2 2 2" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+<!-- pocket -->
+      <a-obj-model id="pocket" src="#pocket_obj" mtl="#pocket_mtl" rotation="0 35 0" position="3.76307 -1.27899 -21.17461" scale="2 2 2" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+<!-- wall_3 -->
+      <a-obj-model id="wall_3" src="#wall_3_obj" mtl="#wall_3_mtl" rotation="0 -20 -3.05" position="-1.6951 0 -14.29332" scale="2 2 2" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
 
     </a-scene>
   </body>
