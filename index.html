@@ -12,29 +12,51 @@
     <a-scene background="color: black" loadingscreen="backgroundColor: black; dotsColor :orange">
 
       <a-assets>
-        <a-asset-item id="wood_obj" src="assets/wood_old/wood.obj"></a-asset-item>
-        <a-asset-item id="wood_mtl" src="assets/wood_old/wood.mtl"></a-asset-item>
+        <a-asset-item id="wood_obj" src="assets/wood/wood.obj"></a-asset-item>
+        <a-asset-item id="wood_mtl" src="assets/wood/wood.mtl"></a-asset-item>
         <a-asset-item id="spider_obj" src="assets/spider/spider.obj"></a-asset-item>
         <a-asset-item id="spider_mtl" src="assets/spider/spider.mtl"></a-asset-item>
+        <a-asset-item id="seno_obj" src="assets/seno_2/seno_2.obj"></a-asset-item>
+        <a-asset-item id="seno_mtl" src="assets/seno_2/seno_2.mtl"></a-asset-item>
+        <a-asset-item id="leaf_obj" src="assets/leaf/leaf.obj"></a-asset-item>
+        <a-asset-item id="leaf_mtl" src="assets/leaf/leaf.mtl"></a-asset-item>
+        <a-asset-item id="circle_obj" src="assets/circle/circle.obj"></a-asset-item>
+        <a-asset-item id="circle_mtl" src="assets/circle/circle.mtl"></a-asset-item>
+        
      
 	<audio id="spider_sound" src="assets/spider/spider.mp3" preload="true"></audio>
       </a-assets>
-      <a-sky color="black"></a-sky>
-	    <a-camera><a-cursor color="red" visible="false"></a-cursor>
-	    <a-sound src="#spider_sound" autoplay="true" loop="true" volume="1" position="0 0 -0.2"></a-sound>
+      <a-sky color="#DA70D6" animation="property: color; to: #FFA500; dir: alternate; loop: true; dur: 10000"></a-sky>
+      <a-entity id="cam_position" rotation="0 0 0" position="0 0 -1">
+	    <a-camera><a-cursor color="red" visible="false" ></a-cursor>
+      	    <a-sound src="#spider_sound" autoplay="true" loop="true" volume="1" position="0 0 -0.2"></a-sound>
 	    </a-camera>
+    </a-entity>
 
-      <a-obj-model id="wood" src="#wood_obj" mtl="#wood_mtl" rotation="-137.53 1.47 4.13" position="-2.70101 25.8838 -48.17656" scale="5 5 5" visible="true" original_scale="5 5 5">      
-	      <a-sphere toid="spider" color="red" position="0.31082 -4.4339 -8.54532" handle-events="" material="" geometry=""> </a-sphere>
-
+<!-- wood -->
+     <a-obj-model id="wood" src="#wood_obj" mtl="#wood_mtl" rotation="-2.48 -17.62 -2.73" position="-7 21 -13.71" scale="3 3 3" visible="" original_scale="3 3 3" material="" obj-model="">      
+        <a-sphere toid="circle" color="red" position="0.31082 -4.4339 -8.54532" handle-events="" material="" geometry=""> </a-sphere>
       </a-obj-model>
 
-      <a-obj-model id="spider" src="#spider_obj" mtl="#spider_mtl" rotation="-10 -2.6 -90" position="5.48339 26.64887 87.2042" scale="10 10 10" visible="false" material="" obj-model="" original_scale="10 10 10" > 
-		      		       
-		      		            </a-sphere>
-		       
-		            </a-sphere>
+<!-- spider -->
+      <a-obj-model id="spider" src="#spider_obj" mtl="#spider_mtl" rotation="0 0 -90" position="0 2 79.90132" scale="11 11 11" visible="false" material="" obj-model="" original_scale="10 10 10">       
       </a-obj-model>
+
+<!-- seno -->
+      <a-obj-model id="seno" src="#seno_obj" mtl="#seno_mtl" rotation="0 235 0" position="0 -10 -60" scale="2 2 2" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+<!-- leaf -->
+      <a-obj-model id="leaf" src="#leaf_obj" mtl="#leaf_mtl" rotation="0 50 0" position="-8 -10 -25.96103" scale="3.5 3.5 3.5" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+<!-- circle -->
+      <a-obj-model id="circle" src="#circle_obj" mtl="#circle_mtl" rotation="0 -90.6 0" position="6.34648 -6.63875 -7.37038" scale="5 5 5" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+    
+
+
     </a-scene>
   </body>
 </html>
