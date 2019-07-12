@@ -56,6 +56,8 @@
 									  ambient_el = document.querySelector('#' + ambient_id);
 									  ambient = ambient_el;
 									  console.log("changing ambient sound to " + ambient.getAttribute("src"));
+									  var camera_sound = document.querySelector('#camera_sound');
+									  camera_sound.setAttribute('src', ambient.getAttribute('src'));
 
 									  <!--[TBD] mute all scene sounds>
 								      var sounds = parel.parentEl.querySelectorAll('a-sound');	

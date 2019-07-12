@@ -40,8 +40,14 @@
         <a-asset-item id="object_1_mtl" src="assets/object_1/object_1.mtl"></a-asset-item>
         -->
 
-     
-        <audio id="spider_sound" src="assets/spider/spider.mp3" preload="true"></audio>
+
+        <!-- sounds --> 
+        <audio id="sand_ambient" src="assets/wood/sand.mp3" preload="true"></audio>
+        <audio id="spider_ambient" src="assets/spider/spider.mp3" preload="true"></audio>
+        <audio id="circle_ambient" src="assets/circle/circle.mp3" prelaad="true"></audio>
+        <audio id="leaf_ambient" src="assets/leaf/leaf.mp3" preload="true"></audio>
+
+
 
 
       </a-assets>
@@ -50,21 +56,21 @@
       <a-entity id="cam_position" rotation="0 0 0" position="0 0 -1">
         <a-camera><a-cursor color="red" visible="false" ></a-cursor>
 
-        <a-sound src="#spider_sound" autoplay="true" loop="true" volume="1" position="0 0 -0.2"></a-sound>
+        <a-sound id="camera_sound" src="#sand_ambient" autoplay="true" loop="true" volume="1" position="0 0 -0.2"></a-sound>
         </a-camera>
       </a-entity>
 
 
 <!-- 1_helmet -->
 <!-- wood -->
-      <a-entity id="wood" ambient="wood_ambient">
+      <a-entity id="wood" ambient="sand_ambient">
         <a-obj-model src="#wood_obj" mtl="#wood_mtl" rotation="-2.48 -17.62 -2.73" position="-7 21 -13.71" scale="3 3 3" visible="" original_scale="3 3 3" material="" obj-model="">      
         </a-obj-model>
       <a-sphere toid="spider" color="black" position="0 20 0" scale="5 5 5" handle-events="" material="" geometry=""> </a-sphere>
       </a-entity>
 
 
-      <a-entity id="spider" amibent="spider_amibent" visible="false">
+      <a-entity id="spider" ambient="spider_ambient" visible="false">
         <a-obj-model src="#spider_obj" mtl="#spider_mtl" rotation="-5 -100 -17" position="-9.41999 -5.38574 -48.66331" scale="11 11 11" material="" obj-model="" original_scale="5 5 5">       
 
         </a-obj-model>
@@ -80,14 +86,14 @@
       <a-sphere toid="leaf" color="orange" position="0 20 0" scale="5 5 5" handle-events="" material="" geometry=""> </a-sphere>
       </a-entity>
 
-      <a-entity id="leaf" visible="false">
+      <a-entity id="leaf" visible="false" ambient="leaf_ambient">
         <a-obj-model src="#leaf_obj" mtl="#leaf_mtl" rotation="0 50 0" position="-8 -10 -25.96103" scale="3.5 3.5 3.5" material="" obj-model="" original_scale="5 5 5">       
         </a-obj-model>
 
       <a-sphere toid="tube" color="blue" position="0 20 0" scale="5 5 5" handle-events="" material="" geometry=""> </a-sphere>
       </a-entity>
 
-      <a-entity id="tube" visible="false">
+      <a-entity id="tube" visible="false" ambient="sand_ambient">
 
         <a-obj-model src="#tube_obj" mtl="#tube_mtl" rotation="-1.92 -59.02 4.37" position="2.20507 -3.23381 -13.716" scale="2 2 2" material="" obj-model="" original_scale="5 5 5">       
         </a-obj-model>
@@ -95,7 +101,7 @@
       <a-sphere toid="wall_3" color="red" position="0 20 0" scale="5 5 5" handle-events="" material="" geometry=""> </a-sphere>
       </a-entity>
 
-      <a-entity id="wall_3" visible="false">
+      <a-entity id="wall_3" visible="false" ambient="sand_ambient">
         <a-obj-model src="#wall_3_obj" mtl="#wall_3_mtl" rotation="1.19 -14.999999999999998 -0.7" position="-24.26439 -3.35 -16" scale="2.5 2.5 2.5" material="" obj-model="" original_scale="5 5 5">       
         </a-obj-model>
 
