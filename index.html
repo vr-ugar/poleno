@@ -9,14 +9,14 @@
   </head>
   
   <body>
-    <a-scene background="color: black" loadingscreen="backgroundColor: black; dotsColor :orange">
+    <a-scene background="color: black" loading-screen="backgroundColor: black; dotsColor :orange">
 
       <a-assets>
         <a-asset-item id="wood_obj" src="assets/wood/wood.obj"></a-asset-item>
         <a-asset-item id="wood_mtl" src="assets/wood/wood.mtl"></a-asset-item>
 
 
-        <!--
+        
         <a-asset-item id="spider_obj" src="assets/spider/spider.obj"></a-asset-item>
         <a-asset-item id="spider_mtl" src="assets/spider/spider.mtl"></a-asset-item>
         <a-asset-item id="seno_obj" src="assets/seno_2/seno_2.obj"></a-asset-item>
@@ -31,7 +31,7 @@
         <a-asset-item id="object_1_mtl" src="assets/object_1/object_1.mtl"></a-asset-item>
         <a-asset-item id="plant_obj" src="assets/plant/plant.obj"></a-asset-item>
         <a-asset-item id="plant_mtl" src="assets/plant/plant.mtl"></a-asset-item>
-        -->
+        
 
         <a-asset-item id="tube_obj" src="assets/tube/tube.obj"></a-asset-item>
         <a-asset-item id="tube_mtl" src="assets/tube/tube.mtl"></a-asset-item>
@@ -61,7 +61,7 @@
 <!-- wood -->
       <a-entity id="wood" ambient="wood_ambient">
 
-<!--
+
 
         <a-sphere toid="spider" color="brown" position="2 2 12" handle-events="" material="" geometry=""> </a-sphere>
         <a-sphere toid="seno" color="yellow" position="4 2 12" handle-events="" material="" geometry=""> </a-sphere>
@@ -75,7 +75,7 @@
 
         <a-sphere toid="plant" color="green" position="20 2 12" handle-events="" material="" geometry=""> </a-sphere>
 
--->
+
 
 
 
@@ -101,7 +101,7 @@
       </a-entity>
 
 
-<!--
+
       <a-entity id="spider" ambient="spider_ambient" visible="false">
         <a-obj-model id="spider" src="#spider_obj" mtl="#spider_mtl" rotation="0 0 -90" position="0 2 79.90132" scale="11 11 11" material="" obj-model="" original_scale="10 10 10">       
         </a-obj-model>
@@ -124,7 +124,7 @@
         <a-obj-model id="leaf" src="#leaf_obj" mtl="#leaf_mtl" rotation="0 50 0" position="-8 -10 -25.96103" scale="3.5 3.5 3.5" material="" obj-model="" original_scale="10 10 10">       
         </a-obj-model>
 
-
+      </a-entity>
     
       <a-entity id="circle" ambient="circle_ambient" visible="false">
       <a-obj-model id="circle" src="#circle_obj" mtl="#circle_mtl" rotation="0 -90.6 0" position="6.34648 -6.63875 -5.29867" scale="10 10 10" visible="false" material="" obj-model="" original_scale="10 10 10">       
@@ -154,7 +154,7 @@
 
           <a-sphere toid="wood" color="black" position="0 6 10" handle-events="" material="" geometry=""> </a-sphere>
       </a-entity>
--->
+
 <!-- tube -->
 
       <a-entity id="tube" ambient="circle_ambient" visible="false">
