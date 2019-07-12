@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>For Katya • A-Frame</title>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js">></script>
+    <script src="handle-events.js"></script>
+
+  </head>
+  
+  <body>
+    <a-scene background="color: black" loading-screen="backgroundColor: black; dotsColor :orange">
+
+      <a-assets>
+        <a-asset-item id="wood_obj" src="assets/wood/wood.obj"></a-asset-item>
+        <a-asset-item id="wood_mtl" src="assets/wood/wood.mtl"></a-asset-item>
+
+        <a-asset-item id="wall_3_obj" src="assets/wall_3/wall_3.obj"></a-asset-item>
+        <a-asset-item id="wall_3_mtl" src="assets/wall_3/wall_3.mtl"></a-asset-item>
+
+
+        
+        <a-asset-item id="spider_obj" src="assets/spider/spider.obj"></a-asset-item>
+        <a-asset-item id="spider_mtl" src="assets/spider/spider.mtl"></a-asset-item>
+        <a-asset-item id="circle_obj" src="assets/circle/circle.obj"></a-asset-item>
+        <a-asset-item id="circle_mtl" src="assets/circle/circle.mtl"></a-asset-item>
+        <a-asset-item id="leaf_obj" src="assets/leaf/leaf.obj"></a-asset-item>
+        <a-asset-item id="leaf_mtl" src="assets/leaf/leaf.mtl"></a-asset-item>
+        <a-asset-item id="tube_obj" src="assets/tube/tube.obj"></a-asset-item>
+        <a-asset-item id="tube_mtl" src="assets/tube/tube.mtl"></a-asset-item>
+
+        <!-- for helmet 2 
+        <a-asset-item id="object_2_obj" src="assets/object_2/object_2.obj"></a-asset-item>
+        <a-asset-item id="object_2_mtl" src="assets/object_2/object_2.mtl"></a-asset-item>
+        <a-asset-item id="plant_obj" src="assets/plant/plant.obj"></a-asset-item>
+        <a-asset-item id="plant_mtl" src="assets/plant/plant.mtl"></a-asset-item>
+        <a-asset-item id="glove_obj" src="assets/glove/glove.obj"></a-asset-item>
+        <a-asset-item id="glove_mtl" src="assets/glove/glove.mtl"></a-asset-item>
+        <a-asset-item id="object_1_obj" src="assets/object_1/object_1.obj"></a-asset-item>
+        <a-asset-item id="object_1_mtl" src="assets/object_1/object_1.mtl"></a-asset-item>
+        -->
+
+
+        <!-- sounds --> 
+        <audio id="sand_ambient" src="assets/wood/sand.mp3" preload="true"></audio>
+        <audio id="spider_ambient" src="assets/spider/spider.mp3" preload="true"></audio>
+        <audio id="circle_ambient" src="assets/circle/circle.mp3" prelaad="true"></audio>
+        <audio id="leaf_ambient" src="assets/leaf/leaf.mp3" preload="true"></audio>
+
+
+
+
+      </a-assets>
+      <a-sky color="#F4DCE3" animation="property: color; to: #B3CBF4; dir: alternate; loop: true; dur: 10000"></a-sky>
+
+      <a-entity id="cam_position" rotation="0 0 0" position="0 0 -1">
+        <a-camera><a-cursor color="red" visible="false" ></a-cursor>
+
+        <a-sound id="camera_sound" src="#sand_ambient" autoplay="true" loop="true" volume="1" position="0 0 -0.2"></a-sound>
+        </a-camera>
+      </a-entity>
+
+
+<!-- 1_helmet -->
+<!-- wood -->
+      <a-entity id="wood" ambient="sand_ambient">
+        <a-obj-model src="#wood_obj" mtl="#wood_mtl" rotation="-2.48 -17.62 -2.73" position="-7 21 -13.71" scale="3 3 3" visible="" original_scale="3 3 3" material="" obj-model="">      
+        </a-obj-model>
+      <a-sphere toid="spider" color="black" position="0 20 0" scale="5 5 5" handle-events="" material="" geometry=""> </a-sphere>
+      </a-entity>
+
+
+      <a-entity id="spider" ambient="spider_ambient" visible="false">
+        <a-obj-model src="#spider_obj" mtl="#spider_mtl" rotation="-5 -100 -17" position="-9.41999 -5.38574 -48.66331" scale="11 11 11" material="" obj-model="" original_scale="5 5 5">       
+
+        </a-obj-model>
+
+      <a-sphere toid="circle" color="green" position="0 20 0" scale="5 5 5" handle-events="" material="" geometry=""> </a-sphere>
+
+      </a-entity>
+
+      <a-entity id="circle" ambient="circle_ambient" visible="false">
+        <a-obj-model src="#circle_obj" mtl="#circle_mtl" rotation="0 -90.6 0" position="6.34648 -6.63875 -5.29867" scale="5 5 5" material="" obj-model="" original_scale="5 5 5">       
+        </a-obj-model>
+
+      <a-sphere toid="leaf" color="orange" position="0 20 0" scale="5 5 5" handle-events="" material="" geometry=""> </a-sphere>
+      </a-entity>
+
+      <a-entity id="leaf" visible="false" ambient="leaf_ambient">
+        <a-obj-model src="#leaf_obj" mtl="#leaf_mtl" rotation="0 50 0" position="-8 -10 -25.96103" scale="3.5 3.5 3.5" material="" obj-model="" original_scale="5 5 5">       
+        </a-obj-model>
+
+      <a-sphere toid="tube" color="blue" position="0 20 0" scale="5 5 5" handle-events="" material="" geometry=""> </a-sphere>
+      </a-entity>
+
+      <a-entity id="tube" visible="false" ambient="sand_ambient">
+
+        <a-obj-model src="#tube_obj" mtl="#tube_mtl" rotation="-1.92 -59.02 4.37" position="2.20507 -3.23381 -13.716" scale="2 2 2" material="" obj-model="" original_scale="5 5 5">       
+        </a-obj-model>
+
+      <a-sphere toid="wall_3" color="red" position="0 20 0" scale="5 5 5" handle-events="" material="" geometry=""> </a-sphere>
+      </a-entity>
+
+      <a-entity id="wall_3" visible="false" ambient="sand_ambient">
+        <a-obj-model src="#wall_3_obj" mtl="#wall_3_mtl" rotation="1.19 -14.999999999999998 -0.7" position="-24.26439 -3.35 -16" scale="2.5 2.5 2.5" material="" obj-model="" original_scale="5 5 5">       
+        </a-obj-model>
+
+      <a-sphere toid="wood" color="white" position="0 20 0" scale="5 5 5" handle-events="" material="" geometry=""> </a-sphere>
+      </a-entity>
+
+
+<!-- 2_helmet 
+
+     <a-obj-model id="wood" src="#wood_obj" mtl="#wood_mtl" rotation="-2.48 -17.62 -2.73" position="-7 21 -13.71" scale="3 3 3" visible="" original_scale="3 3 3" material="" obj-model="">      
+        <a-sphere toid="object_1" color="red" position="3.64407 -1.1301 -9.51773" handle-events="" material="" geometry=""> </a-sphere>
+      </a-obj-model>
+
+      <a-obj-model id="object_2" src="#object_2_obj" mtl="#object_2_mtl" rotation="0 145 0" position="0.99 -0.12365 0" scale="" visible="false" material="" obj-model="" original_scale="5 5 5">       
+      </a-obj-model>
+
+      <a-obj-model id="plant" src="#plant_obj" mtl="#plant_mtl" rotation="0.5 -10 -0.5" position="0 -4 -65" scale="7 7 7" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+      <a-obj-model id="glove" src="#glove_obj" mtl="#glove_mtl" rotation="0 -50 0" position="2.20507 -1.79922 -16.89091" scale="2 2 2" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+      <a-obj-model id="object_1" src="#object_1_obj" mtl="#object_1_mtl" rotation="0 50 0" position="0 -7 -40" scale="10 10 10" visible="false" material="" obj-model="" original_scale="10 10 10">       
+      </a-obj-model>
+
+      <a-obj-model id="wall_3" src="#wall_3_obj" mtl="#wall_3_mtl" rotation="1.19 -14.999999999999998 -0.7" position="-24.26439 -3.35 -16" scale="2.5 2.5 2.5" visible="false" material="" obj-model="" original_scale="10 10 10">       
+>>>>>>> all_objects
+      </a-obj-model>
+ -->
+     
+    
+    </a-scene>
+  </body>
+</html>
