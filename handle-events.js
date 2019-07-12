@@ -51,8 +51,9 @@
 									  console.log("getting ambient");
 									  console.log(toel);
 									  var ambient_id = toel.getAttribute('ambient');
-									  ambient.setAttribute('src', document.getElementById(ambient_id).getAttribute('src'));
-									  <!--ambient.setAttribute('src', '#spider_sound');-->
+									  <!-- ambient.setAttribute('src', document.getElementById(ambient_id).getAttribute('src')); -->
+									  ambient_el = document.querySelector('#' + ambient_id);
+									  ambient = ambient_el;
 									  console.log("ambient src");
 									  console.log(ambient.getAttribute("src"));
 
