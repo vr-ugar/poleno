@@ -56,6 +56,22 @@
 									  ambient_el = document.querySelector('#' + ambient_id);
 									  ambient = ambient_el;
 									  console.log("changing ambient sound to " + ambient.getAttribute("src"));
+									  var camera_sound = document.querySelector('#camera_sound');
+
+    								  var timer = setInterval(function () {
+									  	camera_sound.setAttribute('volume', camera_sound.getAttribute('volume') * 0.9);
+									  	if (camera_sound.getAttribute('volume') < 0.1) {
+									  		clearInterval(timer);
+									  		camera_sound.setAttribute('src', ambient.getAttribute('src'));
+   timer = setInterval(function () {
+  	camera_sound.setAttribute('volume', camera_sound.getAttribute('volume') * 1.1);
+  	if (camera_sound.getAttribute('volume') >= 1) {
+  		clearInterval(timer);
+  	}
+  }, 100);
+
+									  	}
+									  }, 100);
 
 									  <!--[TBD] mute all scene sounds>
 								      var sounds = parel.parentEl.querySelectorAll('a-sound');	
