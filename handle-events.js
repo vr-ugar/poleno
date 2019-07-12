@@ -43,24 +43,23 @@
 
 									                  toel.object3D.scale.z = 1;
 									                  
+									        console.log("changing scene to " + toel.id);
 									  	    toel.setAttribute('visible', 'true');
 									              
 									              document.getElementById(el.parentEl.id).setAttribute('visible', 'false');
           									  <!-- change ambient sound -->
 									  var ambient = document.getElementById("ambient_sound");
-									  console.log("getting ambient");
-									  console.log(toel);
+						
 									  var ambient_id = toel.getAttribute('ambient');
+
 									  <!-- ambient.setAttribute('src', document.getElementById(ambient_id).getAttribute('src')); -->
 									  ambient_el = document.querySelector('#' + ambient_id);
 									  ambient = ambient_el;
-									  console.log("ambient src");
-									  console.log(ambient.getAttribute("src"));
+									  console.log("changing ambient sound to " + ambient.getAttribute("src"));
 
-									  <!--mute all scene sounds>
-								          var sounds = parel.parentEl.querySelectorAll('a-sound');
-									  console.log(parel);
-									  console.log("sounds");
+									  <!--[TBD] mute all scene sounds>
+								      var sounds = parel.parentEl.querySelectorAll('a-sound');	
+									  console.log("Muting scene sounds: ");
 									  console.log(sounds);
 							  		  };	
 			      		     }
